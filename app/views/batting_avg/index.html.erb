@@ -1,0 +1,27 @@
+<table id="batting_avg_table" class="table table-bordered hidden" style="width:100%">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>AVG</th>
+    <th>Hits</th>
+    <th>AB</th>
+    <th>Team(s)</th>
+    <th>Teams count</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @avg_data.each do |d| %>
+      <%=  %>
+      <tr>
+        <td><%= d[:player] %></td>
+        <td><%= d[:year] %></td>
+        <td><%= d[:batting_avg] %></td>
+        <td><%= d[:hits_count] %></td>
+        <td><%= d[:at_bats_count] %></td>
+        <td><%= d[:teams].join(', ') %></td>
+        <td><%= d[:teams_count] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
